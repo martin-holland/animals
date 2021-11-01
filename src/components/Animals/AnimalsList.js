@@ -4,7 +4,7 @@ import AnimalsCard from './AnimalsCard';
 
 const AnimalsList = () => {
     return (
-        <div>
+        <div className="cardContainer">
             {animals.map((item) => 
             <div>
                 <AnimalsCard key={item.name} name={item.name} />
