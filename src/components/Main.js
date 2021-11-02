@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { animals } from './Animals/animals.js'
-import AnimalsList from './Animals/AnimalsList.js';
+import { Switch, Route } from 'react-router-dom'
+import Home from './Home.js';
+import AnimalsPage from './AnimalsPage.js';
+import About from './About.js';
 
 class Main extends Component {
     state = {
@@ -8,9 +11,13 @@ class Main extends Component {
     }
     render() {
         return (
-            <div className="container">
-                <AnimalsList />
-            </div>
+            <main className="container">
+                <Switch>
+            <Route path="/" exact component = {Home} />
+            <Route path="/AnimalsPage" component = {AnimalsPage} />
+            <Route path="/about" component = {About} />
+        </Switch>
+            </main>
         );
     }
 }

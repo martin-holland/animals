@@ -11,18 +11,33 @@
   padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 header {
   width: 100%;
   background-color: var(--bg-main);
-  height: 80px;
+  height: 150px;
 }
 
 header h1 {
   padding: 20px;
+  font-size: 2rem;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card {
     margin: 20px;
+    text-transform: capitalize;
     text-align: center;
     display:flex;
     align-items: center;
@@ -30,8 +45,8 @@ header h1 {
     flex-direction: column;
     background-color: var(--bg-main);
     box-shadow: 0 0 5px darkblue;
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
 }
 
 .card h2 {
@@ -39,21 +54,68 @@ header h1 {
 }
 
 .card img {
-  width: 80%;
-  height: 80%;
+  filter: grayscale(70%);
+  width: 100%;
+  height: 90%;
   padding: 10px;
   object-fit: cover;
+}
+
+.card img:hover {
+  filter: grayscale(0%);
+  box-shadow: darkblue 0 0 5px;
 }
 
 main {
   background-color: var(--bg-light);
   flex-direction: column;
+  padding: 20px;
+}
+
+.about {
+  height: 60vh;
+}
+
+.about p {
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.homepage {
+  height: 60vh;
+}
+
+.homepage p {
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  margin-right: 20px;
+}
+
+nav ul li {
+  padding: 20px;
+  display: inline-block;
+  font-size: 1.25rem;
+
+}
+
+nav ul li a {
+  color: darkblue;
+  text-decoration: none;
 }
 
 .container {
   width: 100%;
 }
+
 .cardContainer {
+  height: 100%;
+  width: 100%;
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -61,8 +123,29 @@ main {
   justify-content: center;
 }
 
+.animalsList {
+  display: flex;
+}
+
+.animalsingle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 footer {
+  text-align: center;
   background-color: var(--bg-main);
   width: 100%;
   height: 40px;
+}
+
+button {
+  height: 60px;
+  width: 200px;
+  font-size: 1rem;
+}
+
+input {
+  display: block;
 }
