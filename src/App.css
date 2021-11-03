@@ -11,16 +11,16 @@
   padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
   width: 100%;
   background-color: var(--bg-main);
-  height: 150px;
+  height: auto;
 }
 
 header h1 {
@@ -29,24 +29,29 @@ header h1 {
 }
 
 .header-wrapper {
+  margin: 0 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
 }
 
+.header-wrapper img {
+  width: 120px;
+}
+
 .card {
-    margin: 20px;
-    text-transform: capitalize;
-    text-align: center;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--bg-main);
-    box-shadow: 0 0 5px darkblue;
-    height: 250px;
-    width: 250px;
+  margin: 20px;
+  text-transform: capitalize;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--bg-main);
+  box-shadow: 0 0 5px darkblue;
+  height: 250px;
+  width: 250px;
 }
 
 .card h2 {
@@ -55,7 +60,7 @@ header h1 {
 
 .card img {
   filter: grayscale(70%);
-  width: 100%;
+  width: 90%;
   height: 90%;
   padding: 10px;
   object-fit: cover;
@@ -66,10 +71,20 @@ header h1 {
   box-shadow: darkblue 0 0 5px;
 }
 
+.card a {
+  padding: 10px;
+}
+
 main {
   background-color: var(--bg-light);
   flex-direction: column;
   padding: 20px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about {
@@ -101,7 +116,6 @@ nav ul li {
   padding: 20px;
   display: inline-block;
   font-size: 1.25rem;
-
 }
 
 nav ul li a {
@@ -116,7 +130,7 @@ nav ul li a {
 .cardContainer {
   height: 100%;
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
@@ -142,10 +156,26 @@ footer {
 
 button {
   height: 60px;
-  width: 200px;
+  width: 150px;
   font-size: 1rem;
 }
 
-input {
-  display: block;
+.searchBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.searchBar label {
+  padding: 20px;
+}
+
+.searchBar input {
+  width: 50%;
+  height: 2rem;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 5px;
 }

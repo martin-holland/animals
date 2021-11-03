@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { animals } from "./animals";
 import AnimalsCard from "./AnimalsCard";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import AnimalsSingle from "./AnimalsSingle";
 
 class AnimalsList extends Component {
@@ -29,15 +29,16 @@ class AnimalsList extends Component {
     return (
       <div className="cardContainer">
         <Switch>
-          <Route exact path={this.props.path}>
+          <Route exact path={this.props.match.path}>
             <input
+              className="searchBar"
               name="searchInput"
               type="text"
               onChange={this.searchInputHandler}
             />
             {animalsListing}
           </Route>
-          <Route path={`${this.props.path}/:animal`}>
+          <Route path={`${this.props.match.path}/:animal`}>
             <AnimalsSingle />
           </Route>
         </Switch>
@@ -46,4 +47,4 @@ class AnimalsList extends Component {
   }
 }
 
-export default AnimalsList;
+export default withRouter(AnimalsList);
