@@ -33,6 +33,7 @@ const AnimalsSingle = (props) => {
 
   useEffect(() => {
     getContents();
+    // eslint-disable-next-line
   }, []);
 
   if (loading) return "Please wait, Loading....";
