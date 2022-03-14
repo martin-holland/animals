@@ -28,7 +28,7 @@ Built with:
 
 ## Live Page
 
-<a href="https://mh-animals.netlify.app/AnimalsPage">Live Page Here</a>
+<a href="https://mh-animals.netlify.app/">Live Page Here</a>
 
 ## Sources
 
